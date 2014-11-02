@@ -6,6 +6,7 @@
             <goals>
                 <goal>clean:clean</goal>
                 <goal>compiler:compile</goal>
+                <goal>install</goal>
             </goals>
             <properties>
                 <skipTests>true</skipTests>
