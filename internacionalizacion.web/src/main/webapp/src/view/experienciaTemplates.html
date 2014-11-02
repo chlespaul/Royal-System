@@ -6,8 +6,12 @@
     <% }%>
 		<div class="form-group" >
 		<label for="texto">Texto</label>
+        
     	<input type="text" class="form-control" id="texto" name="texto" placeholder="Enter value" value="<%= experiencia.get('texto') %>"/>	
-		</div>
+		<%= '<scr'+'ipt>' %>
+                    CKEDITOR.replace( 'texto' );
+                <%= '</scr'+'ipt>' %>
+            </div>
 		<div class="form-group" >
 		<label for="name">Name</label>
     	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= experiencia.get('name') %>"/>	
