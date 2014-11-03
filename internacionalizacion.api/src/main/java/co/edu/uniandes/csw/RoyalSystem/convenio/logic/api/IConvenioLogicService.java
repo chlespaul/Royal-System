@@ -40,4 +40,11 @@ public interface IConvenioLogicService extends _IConvenioLogicService {
     //ya que hay q llamar este metodo en esas 
    public ConvenioPageDTO   filtrarColombia(Integer page , Integer maxrecord,String paisId);
    
+    public ConvenioPageDTO   filtrarNombre(Integer page , Integer maxrecord,String nombre);
+    
+    public ConvenioPageDTO   filtrarDepartamento(Integer page , Integer maxrecord,String departamento);
+    
+       public ConvenioPageDTO   filtrarFacultad(Integer page , Integer maxrecord,String facultad);
+    
+   
 }

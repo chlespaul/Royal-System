@@ -34,10 +34,11 @@ define(['component/_CRUDComponent', 'model/convenioModel', 'controller/convenioC
         listModelClass: App.Model.ConvenioList,
         controller : App.Controller.ConvenioController,
         configUI: function(){
-        	this.listComponent.addColumn('name','Name');
-        	this.listComponent.addColumn('paisId','Pais Id');
-        	this.listComponent.addColumn('facultaduniandesId','Facultaduniandes Id');
-        	this.listComponent.addColumn('departamentouniandesId','Departamentouniandes Id');
+            
+        	this.listComponent.addColumn('name','Nombre');
+        	this.listComponent.addColumn('paisId','Pais');
+        	this.listComponent.addColumn('facultaduniandesId','Facultad');
+        	this.listComponent.addColumn('departamentouniandesId','Departamento');
         }
     });
     return App.Component._ConvenioComponent;

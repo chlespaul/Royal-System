@@ -47,6 +47,18 @@ public class ConvenioMockLogicService extends _ConvenioMockLogicService implemen
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public ConvenioPageDTO filtrarNombre(Integer page, Integer maxrecord, String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ConvenioPageDTO filtrarDepartamento(Integer page, Integer maxrecord, String departamento) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ConvenioPageDTO filtrarFacultad(Integer page, Integer maxrecord, String facultad) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
     

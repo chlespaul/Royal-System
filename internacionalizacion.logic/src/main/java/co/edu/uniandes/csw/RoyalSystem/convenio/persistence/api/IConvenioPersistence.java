@@ -43,5 +43,11 @@ public interface IConvenioPersistence extends _IConvenioPersistence {
     
     public ConvenioPageDTO filtrarCol(Integer page, Integer maxrecords,String paisID);
 
+    public ConvenioPageDTO filtrarNombre(Integer page, Integer maxrecord, String nombre);
+
+    public ConvenioPageDTO filtrarDepartamento(Integer page, Integer maxrecord, String departamento);
+
+    public ConvenioPageDTO filtrarFacultad(Integer page, Integer maxrecord, String facultad);
+
    
 }

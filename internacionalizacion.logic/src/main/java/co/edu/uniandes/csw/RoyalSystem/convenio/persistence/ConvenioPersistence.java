@@ -81,6 +81,97 @@ public class ConvenioPersistence extends _ConvenioPersistence  implements IConve
         
         
     }
+    
+    
+     
+    public ConvenioPageDTO filtrarNombre(Integer page, Integer maxRecords, String nombreP) {
+        String nombre=nombreP;
+        
+		
+        
+                // la consulta que queremos realizar se hace tando el count como el select ya que uno cuenta para
+                //poder paginar y el otro hace la consulta
+                
+                Query count = entityManager.createQuery("select count(u) FROM ConvenioEntity u WHERE u.name='"+nombre+"'");
+                
+		Long regCount = 0L;
+		regCount = Long.parseLong(count.getSingleResult().toString());
+		Query q = entityManager.createQuery("SELECT u FROM ConvenioEntity u WHERE u.name='"+nombre+"'");
+      
+                //solo copiamos y pagamos esta parte para q pagine
+                
+		if (page != null && maxRecords != null) {
+		    q.setFirstResult((page-1)*maxRecords);
+		    q.setMaxResults(maxRecords);
+		}
+		ConvenioPageDTO response = new ConvenioPageDTO();
+		response.setTotalRecords(regCount);
+		response.setRecords(ConvenioConverter.entity2PersistenceDTOList(q.getResultList()));
+		return response;
+        
+    }
+    
+    
+    
+
+    public ConvenioPageDTO filtrarDepartamento(Integer page, Integer maxRecords, String departamento) {
+       
+           String nombre=departamento;
+        
+		
+        
+                // la consulta que queremos realizar se hace tando el count como el select ya que uno cuenta para
+                //poder paginar y el otro hace la consulta
+                
+                Query count = entityManager.createQuery("select count(u) FROM ConvenioEntity u WHERE u.departamentouniandesId="+nombre);
+                
+		Long regCount = 0L;
+		regCount = Long.parseLong(count.getSingleResult().toString());
+		Query q = entityManager.createQuery("SELECT u FROM ConvenioEntity u WHERE u.departamentouniandesId="+nombre);
+      
+                //solo copiamos y pagamos esta parte para q pagine
+                
+		if (page != null && maxRecords != null) {
+		    q.setFirstResult((page-1)*maxRecords);
+		    q.setMaxResults(maxRecords);
+		}
+		ConvenioPageDTO response = new ConvenioPageDTO();
+		response.setTotalRecords(regCount);
+		response.setRecords(ConvenioConverter.entity2PersistenceDTOList(q.getResultList()));
+		return response;
+        
+        
+    }
+
+    public ConvenioPageDTO filtrarFacultad(Integer page, Integer maxRecords, String facultad) {
+      
+        
+           String nombre=facultad;
+        
+		
+        
+                // la consulta que queremos realizar se hace tando el count como el select ya que uno cuenta para
+                //poder paginar y el otro hace la consulta
+                
+                Query count = entityManager.createQuery("select count(u) FROM ConvenioEntity u WHERE u.facultaduniandesId="+nombre);
+                
+		Long regCount = 0L;
+		regCount = Long.parseLong(count.getSingleResult().toString());
+		Query q = entityManager.createQuery("SELECT u FROM ConvenioEntity u WHERE u.facultaduniandesId="+nombre);
+      
+                //solo copiamos y pagamos esta parte para q pagine
+                
+		if (page != null && maxRecords != null) {
+		    q.setFirstResult((page-1)*maxRecords);
+		    q.setMaxResults(maxRecords);
+		}
+		ConvenioPageDTO response = new ConvenioPageDTO();
+		response.setTotalRecords(regCount);
+		response.setRecords(ConvenioConverter.entity2PersistenceDTOList(q.getResultList()));
+		return response;
+        
+    }
+
 
     
 

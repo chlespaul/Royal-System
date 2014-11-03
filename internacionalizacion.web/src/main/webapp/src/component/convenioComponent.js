@@ -35,6 +35,44 @@ define(['component/_convenioComponent'], function() {
        // cotroler que en este caso sera userSearch, ahora pasamos al controller
        
         postInit: function(){
+            
+            
+             this.toolbarComponent.hideButton('search');
+             this.toolbarComponent.hideButton('print');
+               
+             
+           
+            this.toolbarComponent.addButton({
+                  name: 'filtrarNombre',
+                  displayName: 'Filtrar Por Nombre',
+                 icon: 'glyphicon-search',
+                 show: false
+              },
+             this.filtrarNombre,
+             this); 
+             
+             
+             this.toolbarComponent.addButton({
+                  name: 'filtrarFacultad',
+                  displayName: 'Filtrar Por Facultad',
+                 icon: 'glyphicon-search',
+                 show: false
+              },
+             this.filtrarFacultad,
+             this);
+             
+             
+             this.toolbarComponent.addButton({
+                  name: 'filtrarDepartamento',
+                  displayName: 'Filtrar Por Departamento',
+                 icon: 'glyphicon-search',
+                 show: false
+              },
+             this.filtrarDepartamento,
+             this);
+            
+            
+            
               this.toolbarComponent.addButton({
                   name: 'exec-search',
                   displayName: 'Filtrar Por Pais',
@@ -43,32 +81,58 @@ define(['component/_convenioComponent'], function() {
               },
              this.execSearch,
              this);
+             
+             
+              this.toolbarComponent.addButton({
+                  name: 'filtrar',
+                  displayName: 'Filtrar',
+                 icon: 'glyphicon-search',
+                 show: true
+              },
+             this.filtrar,
+             this);
+             
+             
+             
              this.toolbarComponent.addButton({
                  name: 'cancel-search',
                  displayName: 'Cancel',
                  icon: 'glyphicon-remove-sign',
                  show: false
              },
+             
+                
+             
+             
              function(){
+                
                  this.toolbarComponent.showButton('create');
                  this.toolbarComponent.showButton('refresh');
-                 this.toolbarComponent.showButton('print');
-                 this.toolbarComponent.showButton('search');
+                 this.toolbarComponent.showButton('filtrar');
+                 this.toolbarComponent.hideButton('print');
+                this.toolbarComponent.hideButton('search');
                  this.toolbarComponent.hideButton('cancel-search');
                  this.toolbarComponent.hideButton('exec-search');
+                     this.toolbarComponent.hideButton('filtrarNombre');
+             this.toolbarComponent.hideButton('filtrarDepartamento');
+             this.toolbarComponent.hideButton('filtrarFacultad')
                  this.toolbarComponent.render();
                  this.componentController.list(null, this.list, this);
              },
              this);
          },
-         search: function(){
+         filtrar: function(){
              this.toolbarComponent.hideButton('create');
              this.toolbarComponent.hideButton('save');
              this.toolbarComponent.hideButton('cancel');
              this.toolbarComponent.hideButton('print');
              this.toolbarComponent.hideButton('refresh');
              this.toolbarComponent.hideButton('search');
+             this.toolbarComponent.hideButton('filtrar');
              this.toolbarComponent.showButton('exec-search');
+             this.toolbarComponent.showButton('filtrarNombre');
+             this.toolbarComponent.showButton('filtrarDepartamento');
+             this.toolbarComponent.showButton('filtrarFacultad');
              this.toolbarComponent.showButton('cancel-search');
              this.toolbarComponent.render();
              this.componentController.create();
@@ -76,13 +140,71 @@ define(['component/_convenioComponent'], function() {
          execSearch: function(){
              this.toolbarComponent.showButton('create');
              this.toolbarComponent.showButton('refresh');
-             this.toolbarComponent.showButton('print');
-             this.toolbarComponent.showButton('search');
+              this.toolbarComponent.showButton('filtrar');
+             this.toolbarComponent.hideButton('print');
+           this.toolbarComponent.hideButton('search');
              this.toolbarComponent.hideButton('cancel-search');
              this.toolbarComponent.hideButton('exec-search');
+              this.toolbarComponent.hideButton('filtrarNombre');
+             this.toolbarComponent.hideButton('filtrarDepartamento');
+             this.toolbarComponent.hideButton('filtrarFacultad')
              this.toolbarComponent.render();
              this.componentController.userSearch(this.list,this);
          }
+         
+         
+         
+         ,
+         filtrarNombre: function(){
+             this.toolbarComponent.showButton('create');
+             this.toolbarComponent.showButton('refresh');
+              this.toolbarComponent.showButton('filtrar');
+             this.toolbarComponent.hideButton('print');
+           this.toolbarComponent.hideButton('search');
+             this.toolbarComponent.hideButton('cancel-search');
+             this.toolbarComponent.hideButton('exec-search');
+              this.toolbarComponent.hideButton('filtrarNombre');
+             this.toolbarComponent.hideButton('filtrarDepartamento');
+             this.toolbarComponent.hideButton('filtrarFacultad')
+             this.toolbarComponent.render();
+             this.componentController.filtrarNombre(this.list,this);
+         }
+         
+         ,
+         filtrarFacultad: function(){
+             this.toolbarComponent.showButton('create');
+             this.toolbarComponent.showButton('refresh');
+              this.toolbarComponent.showButton('filtrar');
+             this.toolbarComponent.hideButton('print');
+           this.toolbarComponent.hideButton('search');
+             this.toolbarComponent.hideButton('cancel-search');
+             this.toolbarComponent.hideButton('exec-search');
+              this.toolbarComponent.hideButton('filtrarNombre');
+             this.toolbarComponent.hideButton('filtrarDepartamento');
+             this.toolbarComponent.hideButton('filtrarFacultad')
+             this.toolbarComponent.render();
+             this.componentController.filtrarFacultad(this.list,this);
+         }
+         
+         ,
+         filtrarDepartamento: function(){
+             this.toolbarComponent.showButton('create');
+             this.toolbarComponent.showButton('refresh');
+              this.toolbarComponent.showButton('filtrar');
+             this.toolbarComponent.hideButton('print');
+           this.toolbarComponent.hideButton('search');
+             this.toolbarComponent.hideButton('cancel-search');
+             this.toolbarComponent.hideButton('exec-search');
+              this.toolbarComponent.hideButton('filtrarNombre');
+             this.toolbarComponent.hideButton('filtrarDepartamento');
+             this.toolbarComponent.hideButton('filtrarFacultad')
+             this.toolbarComponent.render();
+             this.componentController.filtrarDepartamento(this.list,this);
+         }
+         
+         
+         
+        
      });
        
        

@@ -35,12 +35,90 @@ define(['model/_convenioModel'], function() {
             if(!attrs.name){
                 validationMessage = "The name can't be empty.";
             }
+            
+            if(!attrs.departamentouniandesId){
+                validationMessage = "Tienes que Seleccionar im departamento.";
+            }
+            if(!attrs.facultaduniandesId){
+                validationMessage = "Tienes que Seleccionar una facultad.";
+            }
+            if(!attrs.paisId){
+                validationMessage = "Tienes que Seleccionar un Pais.";
+            }
+            
             if(validationMessage.length>0){
                return validationMessage;
             }
+            
+        },
+        
+        
+        validarNombre:function(attrs)
+        {
+            
+             var validationMessage = "";
+            
+             if(attrs.name.length==0){
+                validationMessage = "Tienes que escribir un Nombre.";
+            }
+            
+            if(validationMessage.length>0){
+                alert(validationMessage)
+               return validationMessage;
+            }
         }
+        
+        ,
+          validarPais:function(attrs)
+        {
+            
+             var validationMessage = "";
+            
+             if(attrs.paisId.length==0){
+                validationMessage = "Tienes que Seleccionar un Pais.";
+            }
+            
+            if(validationMessage.length>0){
+                alert(validationMessage)
+               return validationMessage;
+            }
+        }
+         ,
+          validarDepartamento:function(attrs)
+        {
+            
+             var validationMessage = "";
+            
+             if(attrs.departamentouniandesId.length==0){
+                validationMessage = "Tienes que Seleccionar un Departamento.";
+            }
+            
+            if(validationMessage.length>0){
+                alert(validationMessage)
+               return validationMessage;
+            }
+        }
+        
+        ,
+          validarFacultad:function(attrs)
+        {
+            
+             var validationMessage = "";
+            
+             if(attrs.facultaduniandesId.length==0){
+                validationMessage = "Tienes que Seleccionar una Facultad.";
+            }
+            
+            if(validationMessage.length>0){
+                alert(validationMessage)
+               return validationMessage;
+            }
+        }
+        
 
     });
+    
+    
 
     App.Model.ConvenioList = App.Model._ConvenioList.extend({
         model: App.Model.ConvenioModel

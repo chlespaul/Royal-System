@@ -5,12 +5,12 @@
     <input type="hidden" name="id" value="<%= convenio.id %>"/>
     <% }%>
 		<div class="form-group" >
-		<label for="name">Name</label>
+		<label for="name">Nombre</label>
     	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= convenio.get('name') %>"/>	
 		</div>
 		<div class="form-group" >
  
-			<label for="paisidId">Pais Id</label> 
+			<label for="paisidId">Pais</label> 
             <select class="form-control" id="paisId" name="paisId">
 			  <option value="">None</option>
             <% pais.each(function(paisid) { %> 
@@ -20,7 +20,7 @@
 		</div>
 		<div class="form-group" >
  
-			<label for="facultaduniandesidId">Facultaduniandes Id</label> 
+			<label for="facultaduniandesidId">Facultad</label> 
             <select class="form-control" id="facultaduniandesId" name="facultaduniandesId">
 			  <option value="">None</option>
             <% facultadUniandes.each(function(facultaduniandesid) { %> 
@@ -30,7 +30,7 @@
 		</div>
 		<div class="form-group" >
  
-			<label for="departamentouniandesidId">Departamentouniandes Id</label> 
+			<label for="departamentouniandesidId">Departamento</label> 
             <select class="form-control" id="departamentouniandesId" name="departamentouniandesId">
 			  <option value="">None</option>
             <% departamentoUniandes.each(function(departamentouniandesid) { %> 

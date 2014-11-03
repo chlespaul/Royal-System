@@ -64,9 +64,59 @@ public class ConvenioService extends _ConvenioService {
     
     @GET
 	@Path("pais")
-	public ConvenioPageDTO  filrarPais (@QueryParam("page") Integer page, @QueryParam("maxRecords") Integer maxRecords,@QueryParam("paisId") String paisID){
-            System.out.println("entro a filtrar pais");
+	public ConvenioPageDTO  filrarPais (@QueryParam("page") Integer page, @QueryParam("maxRecords") Integer maxRecords,@QueryParam("paisId") String paisID,@QueryParam("name") String nombre){
+            if(!paisID.equals("")){
 		return convenioLogicService.filtrarColombia(page,maxRecords,paisID);
+        }
+            
+         
+            
+            return  convenioLogicService.filtrarColombia(page,maxRecords,"0");
+          
+        }
+        
+        
+        
+         @GET
+	@Path("nombre")
+	public ConvenioPageDTO  filrarNombre (@QueryParam("page") Integer page, @QueryParam("maxRecords") Integer maxRecords,@QueryParam("paisId") String paisID,@QueryParam("name") String nombre){
+            
+		return convenioLogicService.filtrarNombre(page, maxRecords, nombre);
+	
+            
+         
+            
+           
+          
+        }
+        
+        
+        
+          @GET
+	@Path("departamento")
+	public ConvenioPageDTO  filrarDepartamento (@QueryParam("page") Integer page, @QueryParam("maxRecords") Integer maxRecords,@QueryParam("paisId") String paisID,@QueryParam("departamentouniandesId") String departamento){
+            if(!departamento.equals("")){
+		return convenioLogicService.filtrarDepartamento(page,maxRecords,departamento);
+	}
+            
+         
+            
+            return  convenioLogicService.filtrarDepartamento(page,maxRecords,"0");
+          
+        }
+        
+        
+          @GET
+	@Path("facultad")
+	public ConvenioPageDTO  filrarfacultad (@QueryParam("page") Integer page, @QueryParam("maxRecords") Integer maxRecords,@QueryParam("paisId") String paisID,@QueryParam("facultaduniandesId") String facultad){
+            if(!facultad.equals("")){
+		return convenioLogicService.filtrarFacultad(page,maxRecords,facultad);
+	}
+            
+         
+            
+            return  convenioLogicService.filtrarFacultad(page,maxRecords,"0");
+          
         }
 
 }

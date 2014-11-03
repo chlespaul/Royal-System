@@ -46,6 +46,63 @@ define(['delegate/_convenioDelegate'], function() {
              }, this)).error(_.bind(function(data) {
                  callbackError(data);
              }, this));
-         }
+         },
+         
+         
+         
+         
+         filtrarNombre: function(user, callback, callbackError) {
+              console.log('User Search: ');
+              $.ajax({
+                  url: '/internacionalizacion.web/webresources/Convenio/nombre',
+                  type: 'GET',
+                  data: $.param(user.toJSON()),
+                  contentType: 'application/json'
+             }).done(_.bind(function(data) {
+                 callback(data);
+             }, this)).error(_.bind(function(data) {
+                 callbackError(data);
+             }, this));
+         },
+         
+         
+         
+          filtrarDepartamento: function(user, callback, callbackError) {
+              console.log('User Search: ');
+              $.ajax({
+                  url: '/internacionalizacion.web/webresources/Convenio/departamento',
+                  type: 'GET',
+                  data: $.param(user.toJSON()),
+                  contentType: 'application/json'
+             }).done(_.bind(function(data) {
+                 callback(data);
+             }, this)).error(_.bind(function(data) {
+                 callbackError(data);
+             }, this));
+         },
+         
+         
+         
+         filtrarFacultad: function(user, callback, callbackError) {
+              console.log('User Search: ');
+              $.ajax({
+                  url: '/internacionalizacion.web/webresources/Convenio/facultad',
+                  type: 'GET',
+                  data: $.param(user.toJSON()),
+                  contentType: 'application/json'
+             }).done(_.bind(function(data) {
+                 callback(data);
+             }, this)).error(_.bind(function(data) {
+                 callbackError(data);
+             }, this));
+         },
+         
+         
+         
+         
+         
+         
+         
+         
     });
 });

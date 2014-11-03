@@ -58,6 +58,25 @@ public class ConvenioLogicService extends _ConvenioLogicService implements IConv
         
     }
 
+    public ConvenioPageDTO filtrarNombre(Integer page, Integer maxrecord, String nombre) {
+        
+        
+        return persistance.filtrarNombre(page,maxrecord,nombre); 
+        
+    }
+
+    public ConvenioPageDTO filtrarDepartamento(Integer page, Integer maxrecord, String departamento) {
+     
+         return persistance.filtrarDepartamento(page,maxrecord,departamento); 
+        
+    }
+
+    public ConvenioPageDTO filtrarFacultad(Integer page, Integer maxrecord, String facultad) {
+       
+        
+         return persistance.filtrarFacultad(page,maxrecord,facultad); 
+    }
+
    
 
 
