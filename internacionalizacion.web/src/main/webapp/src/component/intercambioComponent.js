@@ -35,7 +35,8 @@ define(['component/_intercambioComponent'], function() {
                 displayName: 'Buscar',
                 icon: 'glyphicon-search',
                 show: false
-            },this.execsearch,this);
+            },this.execSearch,
+            this);
             this.toolbarComponent.addButton({
                 name:'cancel-search',
                 displayName: 'Cancelar',
