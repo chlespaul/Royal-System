@@ -100,8 +100,9 @@ define(['controller/selectionController', 'model/cacheModel', 'model/experiencia
             
             this.configToolbar(this.archivoComponent,false);
             this.archivoComponent.disableEdit();
+            
 
-            Backbone.on(this.archivoComponent.componentId + '-toolbar-add', function() {
+           Backbone.on(this.archivoComponent.componentId + '-toolbar-add', function() {
                 var selection = new SelectionController({"componentId":"archivoComponent"});
                 App.Utils.getComponentList('archivoComponent', function(componentName, model) {
                     if (model.models.length == 0) {
@@ -112,7 +113,6 @@ define(['controller/selectionController', 'model/cacheModel', 'model/experiencia
                     ;
                 });
             });
-
             Backbone.on('archivoComponent-post-selection', function(models) {
             	self.archivoComponent.addRecords(models);
             	self.archivoComponent.render();

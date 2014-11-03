@@ -35,6 +35,10 @@ define(['model/_experienciaModel'], function() {
             if(!attrs.name){
                 validationMessage = "The name can't be empty.";
             }
+            if(!attrs.texto)
+            {
+                validationMessage = "The text can't be empty."
+            }
             if(validationMessage.length>0){
                return validationMessage;
             }

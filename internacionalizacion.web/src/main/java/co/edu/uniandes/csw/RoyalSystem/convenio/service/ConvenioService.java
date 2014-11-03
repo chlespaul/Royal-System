@@ -67,6 +67,6 @@ public class ConvenioService extends _ConvenioService {
 	public ConvenioPageDTO  filrarPais (@QueryParam("page") Integer page, @QueryParam("maxRecords") Integer maxRecords,@QueryParam("paisId") String paisID){
             System.out.println("entro a filtrar pais");
 		return convenioLogicService.filtrarColombia(page,maxRecords,paisID);
-	}
+        }
 
 }
