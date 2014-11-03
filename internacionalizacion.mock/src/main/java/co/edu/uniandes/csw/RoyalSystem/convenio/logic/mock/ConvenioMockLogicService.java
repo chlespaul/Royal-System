@@ -33,7 +33,23 @@ import javax.enterprise.inject.Alternative;
 import javax.inject.Singleton;
 
 import co.edu.uniandes.csw.RoyalSystem.convenio.logic.api.IConvenioLogicService;
+import co.edu.uniandes.csw.RoyalSystem.convenio.logic.dto.ConvenioDTO;
+import co.edu.uniandes.csw.RoyalSystem.convenio.logic.dto.ConvenioPageDTO;
+import java.util.List;
 @Singleton
 public class ConvenioMockLogicService extends _ConvenioMockLogicService implements IConvenioLogicService {
-	
+
+    
+    // aca no es necesario hacer nada... aca van las excepciones entonces solo se implementara el metodo 
+    //que creamos en la interfaz inicial 
+    
+    public ConvenioPageDTO  filtrarColombia(Integer page , Integer maxrecords , String paisId) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+
+    
+
+ 
 }

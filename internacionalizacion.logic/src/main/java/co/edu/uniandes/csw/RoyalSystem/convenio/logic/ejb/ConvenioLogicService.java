@@ -38,10 +38,32 @@ import javax.inject.Inject;
 import javax.enterprise.inject.Default;
 
 import co.edu.uniandes.csw.RoyalSystem.convenio.logic.api.IConvenioLogicService;
+import co.edu.uniandes.csw.RoyalSystem.convenio.logic.dto.ConvenioDTO;
+import co.edu.uniandes.csw.RoyalSystem.convenio.logic.dto.ConvenioPageDTO;
+import java.util.List;
 
 @Default
 @Stateless
 @LocalBean
 public class ConvenioLogicService extends _ConvenioLogicService implements IConvenioLogicService {
+
+    
+    // como codigo de la clase que creamos de la interfaz retornamos un metodo que tenemos que crear 
+    // en la persistance como s emuestra abajo , este metodo se crea tanto en la interfaz de persistenci como en la clase
+    
+    public ConvenioPageDTO  filtrarColombia(Integer page , Integer maxrecord, String paisID) {
+       
+        return persistance.filtrarCol(page,maxrecord,paisID); 
+        
+        
+    }
+
+   
+
+
+        
+
+
+ 
 
 }

@@ -65,4 +65,7 @@ public abstract class _ConvenioLogicService implements _IConvenioLogicService {
 	public void updateConvenio(ConvenioDTO convenio){
 	    persistance.updateConvenio(convenio); 
 	}	
+        
+        
+       
 }

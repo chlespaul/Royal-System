@@ -37,7 +37,7 @@ define(['component/_convenioComponent'], function() {
         postInit: function(){
               this.toolbarComponent.addButton({
                   name: 'exec-search',
-                  displayName: 'Search',
+                  displayName: 'Filtrar Por Pais',
                  icon: 'glyphicon-search',
                  show: false
               },
