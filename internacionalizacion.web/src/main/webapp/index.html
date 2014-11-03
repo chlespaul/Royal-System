@@ -1,71 +1,119 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Application</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="./js/vendor/jquery-1.9.1.js"></script>
-        <script src="./js/vendor/bootstrap.min.js"></script>
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-          <script src="../../assets/js/html5shiv.js"></script>
-          <script src="../../assets/js/respond.min.js"></script>
-        <![endif]-->
-        <script type="text/javascript">
-            function redirectFrame(url) {
-                $('#container').attr('src', url);
-                $('#container').css('height', ($(window).height() - $('#header').height() - 30) + 'px');
-            }
-            
-            </script>
-    </head>
-    <body>
-        <div id="header" >
-            <div class="btn-group navbar-default menu" style="width: 100%;">
-	            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	                Menu <span class="caret"></span>
-	            </button>
-	            <ul class="dropdown-menu" role="menu">
-	                <li><a href="#" onclick="redirectFrame('estudiante.html'); return false;">Estudiante</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('tipoEstudiante.html'); return false;">TipoEstudiante</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('intercambio.html'); return false;">Intercambio</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('estadoIntercambio.html'); return false;">EstadoIntercambio</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('experiencia.html'); return false;">Experiencia</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('archivo.html'); return false;">Archivo</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('comentario.html'); return false;">Comentario</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('convenio.html'); return false;">Convenio</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('pais.html'); return false;">Pais</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('entidadExtranjera.html'); return false;">EntidadExtranjera</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('facultadUniandes.html'); return false;">FacultadUniandes</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('departamentoUniandes.html'); return false;">DepartamentoUniandes</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('homologacion.html'); return false;">Homologacion</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('estadoHomologacion.html'); return false;">EstadoHomologacion</a></li>
-    
-	                <li><a href="#" onclick="redirectFrame('materiaUniandes.html'); return false;">MateriaUniandes</a></li>
-    
-	                <li class="divider"></li>
-	          			      <li><a href="#" onclick="redirectFrame('experienciaMaster.html'); return false;">Experiencia Master</a></li>
-       				
-	          			      <li><a href="#" onclick="redirectFrame('convenioMaster.html'); return false;">Convenio Master</a></li>
-       				
-	            </ul>
-	        </div>
-	        <hr/>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>2 Col Portfolio - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/2-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Internacionalizacion</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+          
+            <!-- /.navbar-collapse -->
         </div>
-        <iframe id="container" src="" style="width: 100%; height: 100%; border: 0; margin: 0;"></iframe> 
-    </body>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+
+        <!-- Page Header -->
+      
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <a href="./admi.html">
+                    <img class="img-responsive" src="http://www.monografias.com/trabajos97/sobre-la-administracion-de-empresas/image037.jpg" alt="">
+                </a>
+                <h3>
+                    Administrador
+                </h3>
+                <p>Para entrar como administrador ingresa aca.</p>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                <a href="./usuario.html">
+                    <img class="img-responsive" src="http://www.managementjournal.net/images/stories/perfilesdeusuarios.jpg" alt="">
+                </a>
+                <h3>
+                   Usuario
+                </h3>
+                <p>Para entrar como usuario ingresa aca.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Projects Row -->
+     
+        <!-- /.row -->
+
+        <hr>
+
+     
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
