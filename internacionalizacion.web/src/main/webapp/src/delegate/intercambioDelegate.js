@@ -31,7 +31,7 @@ define(['delegate/_intercambioDelegate'], function() {
     App.Delegate.IntercambioDelegate = App.Delegate._IntercambioDelegate.extend({
         search: function(intercambio, callback, callbackError){
             console.log('User Search: ');
-            $ajax({
+            $.ajax({
                 url: '/internacionalizacion.web/webresources/intercambio/search/query',
                 type: 'GET',
                 data: $.param(intercambio.toJSON()),
