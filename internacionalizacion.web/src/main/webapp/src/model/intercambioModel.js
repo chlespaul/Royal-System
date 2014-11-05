@@ -35,6 +35,22 @@ define(['model/_intercambioModel'], function() {
             if(!attrs.name){
                 validationMessage = "The name can't be empty.";
             }
+            
+            if(!attrs.fechaCreacion){
+                validationMessage = "La fecha no puede estar vacia";
+            }
+            if(!attrs.estudianteId){
+                validationMessage = "El estudiante no puede ser vacio.";
+            }
+            if(!attrs.estadoId){
+                validationMessage = "Es necesario seleccionar un estado";
+            }
+             if(!attrs.convenioId){
+                validationMessage = "Es necesario seleccionar un convenio";
+            }
+            
+            
+            
             if(validationMessage.length>0){
                return validationMessage;
             }
