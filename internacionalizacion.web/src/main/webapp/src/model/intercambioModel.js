@@ -38,6 +38,20 @@ define(['model/_intercambioModel'], function() {
             if(validationMessage.length>0){
                return validationMessage;
             }
+        },
+         validarEstado:function(attrs)
+        {
+            
+             var validationMessage = "";
+            
+             if(attrs.estadoId.length==0){
+                validationMessage = "Tienes que Seleccionar un estado.";
+            }
+            
+            if(validationMessage.length>0){
+                alert(validationMessage)
+               return validationMessage;
+            }
         }
 
     });
