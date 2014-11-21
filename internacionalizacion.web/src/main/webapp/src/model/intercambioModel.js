@@ -33,7 +33,7 @@ define(['model/_intercambioModel'], function() {
  		validate: function(attrs,options){
             var validationMessage = "";
             if(!attrs.name){
-                validationMessage = "The name can't be empty.";
+                validationMessage = "El nombre no puede ser vacio";
             }
             
             if(!attrs.fechaCreacion){
@@ -42,8 +42,8 @@ define(['model/_intercambioModel'], function() {
             if(!attrs.estudianteId){
                 validationMessage = "El estudiante no puede ser vacio.";
             }
-            if(!attrs.estadoId){
-                validationMessage = "Es necesario seleccionar un estado";
+            if(parseInt(attrs.estadoId)!=2){
+                validationMessage = "Es necesario seleccionar estado en espera";
             }
              if(!attrs.convenioId){
                 validationMessage = "Es necesario seleccionar un convenio";

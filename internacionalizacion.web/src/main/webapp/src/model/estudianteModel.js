@@ -35,6 +35,36 @@ define(['model/_estudianteModel'], function() {
             if(!attrs.name){
                 validationMessage = "The name can't be empty.";
             }
+            
+             if(!attrs.creditosAprovados){
+                validationMessage = "Tienes que ingresa el numero de creditos aprobado";
+            }
+            
+             if(!attrs.codigo){
+                validationMessage = "Tienes que ingresa el codigo";
+            }
+             if(!attrs.promedio){
+                validationMessage = "Tienes que ingresa el promedio";
+            }
+            
+             if( !parseInt(attrs.creditosAprovados)>0){
+                validationMessage = "El numero de creditos debe ser mayor a 0";
+            }
+            
+            if( parseInt(attrs.codigo)<1000000){
+                validationMessage = "El codigo ingresado no es valido";
+            }
+            
+            if( parseInt(attrs.promedio)<1.5 ){
+                validationMessage = "El promedio debe estar entre 1.5 y 5";
+            }
+             if( parseInt(attrs.promedio)>5.0001){
+                validationMessage = "El promedio debe estar entre 1.5 y 5";
+            }
+            if(!attrs.tipoId){
+                validationMessage = "Tienes que seleccionar un tipo";
+            }
+            
             if(validationMessage.length>0){
                return validationMessage;
             }
