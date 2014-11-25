@@ -32,7 +32,7 @@ define(['component/_intercambioComponent'], function() {
         postInit: function(){
             this.toolbarComponent.addButton({
                 name: 'exec-search',
-                displayName: 'Buscar',
+                displayName: 'Search',
                 icon: 'glyphicon-search',
                 show: false
             },this.execSearch,
