@@ -36,7 +36,6 @@ define(['component/_convenioComponent'], function() {
        
         postInit: function(){
             
-            
              this.toolbarComponent.hideButton('search');
              this.toolbarComponent.hideButton('print');
                
