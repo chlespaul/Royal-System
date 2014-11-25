@@ -6,13 +6,13 @@
     <% }%>
 		<div class="form-group" >
 		<label for="name">Nombre</label>
-    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= convenio.get('name') %>"/>	
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Ingrese nombre" value="<%= convenio.get('name') %>"/>	
 		</div>
 		<div class="form-group" >
  
-			<label for="paisidId">Pais</label> 
+			<label for="paisidId">Pa&iacute;s</label> 
             <select class="form-control" id="paisId" name="paisId">
-			  <option value="">None</option>
+			  <option value="">Ninguno</option>
             <% pais.each(function(paisid) { %> 
               <option value="<%=paisid.get('id')%>" <% if(convenio.get('paisId')==paisid.get('id')) {%>selected<%}%> ><%=paisid.get('name')%></option>
             <% }); %>                
@@ -22,7 +22,7 @@
  
 			<label for="facultaduniandesidId">Facultad</label> 
             <select class="form-control" id="facultaduniandesId" name="facultaduniandesId">
-			  <option value="">None</option>
+			  <option value="">Ninguno</option>
             <% facultadUniandes.each(function(facultaduniandesid) { %> 
               <option value="<%=facultaduniandesid.get('id')%>" <% if(convenio.get('facultaduniandesId')==facultaduniandesid.get('id')) {%>selected<%}%> ><%=facultaduniandesid.get('name')%></option>
             <% }); %>                
@@ -32,7 +32,7 @@
  
 			<label for="departamentouniandesidId">Departamento</label> 
             <select class="form-control" id="departamentouniandesId" name="departamentouniandesId">
-			  <option value="">None</option>
+			  <option value="">Ninguno</option>
             <% departamentoUniandes.each(function(departamentouniandesid) { %> 
               <option value="<%=departamentouniandesid.get('id')%>" <% if(convenio.get('departamentouniandesId')==departamentouniandesid.get('id')) {%>selected<%}%> ><%=departamentouniandesid.get('name')%></option>
             <% }); %>                

@@ -5,22 +5,22 @@
     <input type="hidden" name="id" value="<%= homologacion.id %>"/>
     <% }%>
 		<div class="form-group" >
-		<label for="name">Name</label>
-    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= homologacion.get('name') %>"/>	
+		<label for="name">Nombre</label>
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Ingrese nombre" value="<%= homologacion.get('name') %>"/>	
 		</div>
 		<div class="form-group" >
 		<label for="materiaExtranjera">Materia Extranjera</label>
-    	<input type="text" class="form-control" id="materiaExtranjera" name="materiaExtranjera" placeholder="Enter value" value="<%= homologacion.get('materiaExtranjera') %>"/>	
+    	<input type="text" class="form-control" id="materiaExtranjera" name="materiaExtranjera" placeholder="Ingrese nombre materia extranjera" value="<%= homologacion.get('materiaExtranjera') %>"/>	
 		</div>
 		<div class="form-group" >
 		<label for="equivalenciaCreditos">Equivalencia Creditos</label>
-    	<input type="text" class="form-control" id="equivalenciaCreditos" name="equivalenciaCreditos" placeholder="Enter value" value="<%= homologacion.get('equivalenciaCreditos') %>"/>	
+    	<input type="text" class="form-control" id="equivalenciaCreditos" name="equivalenciaCreditos" placeholder="Ingrese proporcion equivalencia creditos" value="<%= homologacion.get('equivalenciaCreditos') %>"/>	
 		</div>
 		<div class="form-group" >
  
 			<label for="estadoidId">Estado Id</label> 
             <select class="form-control" id="estadoId" name="estadoId">
-			  <option value="">None</option>
+			  <option value="">Ninguno</option>
             <% estado.each(function(estadoid) { %> 
               <option value="<%=estadoid.get('id')%>" <% if(homologacion.get('estadoId')==estadoid.get('id')) {%>selected<%}%> ><%=estadoid.get('name')%></option>
             <% }); %>                
@@ -30,7 +30,7 @@
  
 			<label for="materiauniandesidId">Materiauniandes Id</label> 
             <select class="form-control" id="materiauniandesId" name="materiauniandesId">
-			  <option value="">None</option>
+			  <option value="">Ninguno</option>
             <% materiaUniandes.each(function(materiauniandesid) { %> 
               <option value="<%=materiauniandesid.get('id')%>" <% if(homologacion.get('materiauniandesId')==materiauniandesid.get('id')) {%>selected<%}%> ><%=materiauniandesid.get('name')%></option>
             <% }); %>                

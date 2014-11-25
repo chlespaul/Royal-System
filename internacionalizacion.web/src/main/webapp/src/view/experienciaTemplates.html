@@ -5,16 +5,16 @@
     <input type="hidden" name="id" value="<%= experiencia.id %>"/>
     <% }%>
                 <div class="form-group" >
-		<label for="titulo">Titulo</label>
+		<label for="titulo">T&iacute;tulo</label>
         
-    	<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Enter value" value="<%= experiencia.get('titulo') %>"/>	
+    	<input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese t&iacute;tulo" value="<%= experiencia.get('titulo') %>"/>	
 	
             </div>
         
 		<div class="form-group" >
 		<label for="texto">Texto</label>
         
-    	<input type="text" class="form-control" id="texto" name="texto" value="<%= experiencia.get('texto') %>" placeholder="Enter value" style="display:none" />	
+    	<input type="text" class="form-control" id="texto" name="texto" value="<%= experiencia.get('texto') %>" placeholder="Ingrese texto" style="display:none" />	
         <textArea id="area1" />
             <%= '<scr'+'ipt>' %>
                     CKEDITOR.replace( 'area1' );
@@ -34,11 +34,11 @@
             </div>
 		<div class="form-group" >
 		<label for="name">Autor</label>
-    	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= experiencia.get('name') %>"/>	
+    	<input type="text" class="form-control" id="name" name="name" placeholder="Ingrese autor" value="<%= experiencia.get('name') %>"/>	
 		</div>
 		
 		<div class="form-group" >
-    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="fecha"  name="fecha" placeholder="Enter value" style="display:none" />
+    		<input type="text" data-converter="date" data-date-format="dd/mm/yyyy" class="form-control" id="fecha"  name="fecha" placeholder="Ingrese fecha" style="display:none" />
     		<%= '<scr'+'ipt>' %>
         	$('#fecha').datepicker({autoclose:true});
         	$('#fecha').datepicker('setDate',App.Utils.Converter.date.toDate("<%= experiencia.get('fecha') %>"));
