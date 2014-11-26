@@ -31,11 +31,11 @@ define(['controller/_materiaUniandesController','delegate/materiaUniandesDelegat
     App.Controller.MateriaUniandesController = App.Controller._MateriaUniandesController.extend({
         materiaSearch: function(callback,context){
           var self = this;
-              var model = $('#' + this.componentId + '-intercambioForm').serializeObject();
+              var model = $('#' + this.componentId + '-materiaUniandesForm').serializeObject();
              var m = new App.Model.MateriaUniandesModel;
              this.error(model)
               this.currentModel.set(model);
-              
+              console.log(self.currentModel);
               
               var delegate = new App.Delegate.MateriaUniandesDelegate();
               delegate.filtrarMateria(self.currentModel, function (data) {

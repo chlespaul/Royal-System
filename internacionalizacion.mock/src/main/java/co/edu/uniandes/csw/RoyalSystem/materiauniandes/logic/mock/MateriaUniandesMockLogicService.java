@@ -33,7 +33,12 @@ import javax.enterprise.inject.Alternative;
 import javax.inject.Singleton;
 
 import co.edu.uniandes.csw.RoyalSystem.materiauniandes.logic.api.IMateriaUniandesLogicService;
+import co.edu.uniandes.csw.RoyalSystem.materiauniandes.logic.dto.MateriaUniandesPageDTO;
 @Singleton
 public class MateriaUniandesMockLogicService extends _MateriaUniandesMockLogicService implements IMateriaUniandesLogicService {
+
+    public MateriaUniandesPageDTO filtrarMateria(Integer intgr, String intgr1, String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 	
 }

@@ -32,7 +32,7 @@ define(['delegate/_materiaUniandesDelegate'], function() {
         filtrarMateria: function(user, callback, callbackError) {
               console.log('User Search: ');
               $.ajax({
-                  url: '/internacionalizacion.web/webresources/materiaUniandes/materia',
+                  url: '/internacionalizacion.web/webresources/MateriaUniandes/materia',
                   type: 'GET',
                   data: $.param(user.toJSON()),
                   contentType: 'application/json'
