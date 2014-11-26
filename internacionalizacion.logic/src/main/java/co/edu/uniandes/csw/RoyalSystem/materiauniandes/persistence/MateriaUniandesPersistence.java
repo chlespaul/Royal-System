@@ -56,11 +56,11 @@ public class MateriaUniandesPersistence extends _MateriaUniandesPersistence  imp
                 // la consulta que queremos realizar se hace tando el count como el select ya que uno cuenta para
                 //poder paginar y el otro hace la consulta
                 
-                Query count = entityManager.createQuery("select count(u) FROM MateriaUniandesEntity u WHERE u.codigo="+codigo+ " OR u.name="+name);
+                Query count = entityManager.createQuery("select count(u) FROM MateriaUniandesEntity u WHERE u.codigo="+codigo);//+ " OR u.name LIKE "+name);
                 
 		Long regCount = 0L;
 		regCount = Long.parseLong(count.getSingleResult().toString());
-		Query q = entityManager.createQuery("SELECT u FROM MateriaUniandesEntity u WHERE u.codigo="+codigo+ " OR u.name="+name);
+		Query q = entityManager.createQuery("SELECT u FROM MateriaUniandesEntity u WHERE u.codigo="+codigo);//+ " OR u.name LIKE "+name);
       
                 //solo copiamos y pagamos esta parte para q pagine
 		
