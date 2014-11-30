@@ -46,7 +46,7 @@ public class MateriaUniandesPersistence extends _MateriaUniandesPersistence  imp
     public MateriaUniandesPageDTO getFiltrarMateria(Integer codigo, String name, String estadoId) {
         
         System.out.println("entro a buscar ------------------------------------------------");
-          System.out.println("el estadoid es : "+estadoId);
+          System.out.println("el estadoid es : "+estadoId +" El codigo es: "+codigo);
          
          
          String nombre=estadoId;
@@ -56,7 +56,7 @@ public class MateriaUniandesPersistence extends _MateriaUniandesPersistence  imp
                 // la consulta que queremos realizar se hace tando el count como el select ya que uno cuenta para
                 //poder paginar y el otro hace la consulta
                 
-                Query count = entityManager.createQuery("select count(u) FROM MateriaUniandesEntity u WHERE u.codigo="+codigo);//+ " OR u.name LIKE "+name);
+                Query count = entityManager.createQuery("select count(u) FROM MateriaUniandesEntity u WHERE u.codigo = "+codigo.toString());//+ " OR u.name LIKE "+name);
                 
 		Long regCount = 0L;
 		regCount = Long.parseLong(count.getSingleResult().toString());
