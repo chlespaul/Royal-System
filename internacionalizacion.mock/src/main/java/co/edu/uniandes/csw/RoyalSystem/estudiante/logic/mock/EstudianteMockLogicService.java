@@ -33,7 +33,11 @@ import javax.enterprise.inject.Alternative;
 import javax.inject.Singleton;
 
 import co.edu.uniandes.csw.RoyalSystem.estudiante.logic.api.IEstudianteLogicService;
+import co.edu.uniandes.csw.RoyalSystem.estudiante.logic.dto.EstudianteDTO;
 @Singleton
 public class EstudianteMockLogicService extends _EstudianteMockLogicService implements IEstudianteLogicService {
-	
+	public EstudianteDTO getEstudianteId(String name)
+        {
+            return null;
+        }
 }

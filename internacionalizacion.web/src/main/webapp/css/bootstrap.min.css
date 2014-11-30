@@ -11,6 +11,11 @@ html
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
 }
+
+#header_image_sociable 
+{
+    position: absolute; right:40px; top: 20px;
+}
 body
 {
     margin:0
@@ -59,7 +64,7 @@ h1
 }
 mark
 {
-    background:#ff0;
+    background:#000;
     color:#000
 }
 small

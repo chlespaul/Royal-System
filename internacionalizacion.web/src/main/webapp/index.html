@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+    <HEAD>
+        <TITLE>Universidad de los Andes - Colombia</TITLE>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="css/main.css">
+        
+        <script src="./js/vendor/jquery-1.9.1.js"></script>
+        
+        <script src="./js/vendor/bootstrap.min.js"></script>
+ 
+        <SCRIPT src="http://www.uniandes.edu.co//modules/mod_djmenu/ieHover.js" type=text/javascript></SCRIPT>
 
-<head>
+        <SCRIPT id=ie_ready src="javascript:void(0)" defer></SCRIPT>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <SCRIPT src="http://www.uniandes.edu.co/modules/mod_superfishmenu/tmpl/js/jquery.js" type=text/javascript></SCRIPT>
 
-    <title>Internacionalizaci&oacute;n</title>
+        <SCRIPT src="http://www.uniandes.edu.co/modules/mod_superfishmenu/tmpl/js/jquery.event.hover.js" type=text/javascript></SCRIPT>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <SCRIPT src="http://www.uniandes.edu.co/modules/mod_superfishmenu/tmpl/js/superfish.js" type=text/javascript></SCRIPT>
 
-    <!-- Custom CSS -->
-    <link href="css/2-col-portfolio.css" rel="stylesheet">
+<SCRIPT type=text/javascript>
+		window.addEvent('domready', function(){ var JTooltips = new Tips($$('.toolYb'), { maxTitleChars: 50, fixed: false}); });
+jQuery.noConflict();
+jQuery(function($){ $("ul.sf-menu").superfish({hoverClass:'sfHover', pathClass:'active', pathLevels:0, delay:800, animation:{width:'show'}, speed:'def', autoArrows:1, dropShadows:1}) });
+jQuery.event.special.hover.delay = 100;
+jQuery.event.special.hover.speed = 100;
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  </SCRIPT>
+<SCRIPT type=text/javascript>
+	jQuery(document).ready(function(){
+		jQuery('audio,video').mediaelementplayer({
+			success: function(player, node) {
+				jQuery('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+			}
+		});
+	});
+	</SCRIPT>
 
-</head>
+<SCRIPT type=text/javascript>
+	jQuery.noConflict();
+		jQuery(window).resize(function(){
+		// redimensionar();
+		jQuery(".movil ._interna > ul").slideUp();
+		jQuery(".tablet ._media > ul").slideUp();
+	});
+		</SCRIPT>
 
+</HEAD>
 <body>
-
+    
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Internacionalizaci&oacute;n</a>
-                <a class="navbar-brand" href="enDesarrollo.html">Cambiar Idioma/Change Language</a>
+            <div class="navbar-header">	
+      <a href="http://www.uniandes.edu.co/">
+<img alt="Universidad de los Andes" 
+             src="https://ingenieria.uniandes.edu.co/grupos/ciia/images/logo_uniandes2.png"> 
+      </a> 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
           
@@ -96,15 +117,6 @@
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
 
     </div>
     <!-- /.container -->

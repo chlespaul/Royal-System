@@ -5,7 +5,10 @@
     "url" : "experiencia.html",
     "server": "localhost:8080",
     "server": "localhost:8080",
+    
     "context": "/internacionalizacion.web/webresources/ExperienciaMaster",
+    
+	
     
     "el" : "#main"
 }

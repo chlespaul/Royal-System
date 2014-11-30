@@ -1,7 +1,7 @@
 define(['controller/selectionController', 'model/cacheModel', 'model/experienciaMasterModel', 'component/_CRUDComponent', 'controller/tabController', 'component/experienciaComponent',
- 'component/comentarioComponent', 'component/archivoComponent'],
+ 'component/archivoComponent', 'component/comentarioComponent'],
  function(SelectionController, CacheModel, ExperienciaMasterModel, CRUDComponent, TabController, ExperienciaComponent,
- comentarioComponent, archivoComponent) {
+ archivoComponent, comentarioComponent) {
     App.Component._ExperienciaMasterComponent = App.Component.BasicComponent.extend({
         initialize: function() {
             var self = this;
@@ -37,19 +37,19 @@ define(['controller/selectionController', 'model/cacheModel', 'model/experiencia
                 }
 
 				App.Utils.fillCacheList(
-					'comentario',
-					self.model,
-					self.comentarioComponent.getDeletedRecords(),
-					self.comentarioComponent.getUpdatedRecords(),
-					self.comentarioComponent.getCreatedRecords()
-				);
-
-				App.Utils.fillCacheList(
 					'archivo',
 					self.model,
 					self.archivoComponent.getDeletedRecords(),
 					self.archivoComponent.getUpdatedRecords(),
 					self.archivoComponent.getCreatedRecords()
+				);
+
+				App.Utils.fillCacheList(
+					'comentario',
+					self.model,
+					self.comentarioComponent.getDeletedRecords(),
+					self.comentarioComponent.getUpdatedRecords(),
+					self.comentarioComponent.getCreatedRecords()
 				);
 
                 self.model.save({}, {
@@ -78,46 +78,31 @@ define(['controller/selectionController', 'model/cacheModel', 'model/experiencia
 		},
 		initializeChildComponents: function () {
 			this.tabModel = new App.Model.TabModel({tabs: [
-                {label: "Comentario", name: "comentario", enable: true},
-                {label: "Archivo", name: "archivo", enable: true}
+                {label: "Archivo", name: "archivo", enable: true},
+                {label: "Comentario", name: "comentario", enable: true}
 			]});
 			this.tabs = new TabController({model: this.tabModel});
-
-			this.comentarioComponent = new comentarioComponent();
-            this.comentarioComponent.initialize({cache: {data: [], mode: "memory"},pagination: false});
-			this.childComponents.push(this.comentarioComponent);
 
 			this.archivoComponent = new archivoComponent();
             this.archivoComponent.initialize({cache: {data: [], mode: "memory"},pagination: false});
 			this.childComponents.push(this.archivoComponent);
 
+			this.comentarioComponent = new comentarioComponent();
+            this.comentarioComponent.initialize({cache: {data: [], mode: "memory"},pagination: false});
+			this.childComponents.push(this.comentarioComponent);
+
             var self = this;
+            
+            this.configToolbar(this.archivoComponent,true);
+            Backbone.on(self.archivoComponent.componentId + '-post-archivo-create', function(params) {
+                params.view.currentModel.setCacheList(params.view.currentList);
+            });
             
             this.configToolbar(this.comentarioComponent,true);
             Backbone.on(self.comentarioComponent.componentId + '-post-comentario-create', function(params) {
                 params.view.currentModel.setCacheList(params.view.currentList);
             });
             
-            this.configToolbar(this.archivoComponent,false);
-            this.archivoComponent.disableEdit();
-            
-
-           Backbone.on(this.archivoComponent.componentId + '-toolbar-add', function() {
-                var selection = new SelectionController({"componentId":"archivoComponent"});
-                App.Utils.getComponentList('archivoComponent', function(componentName, model) {
-                    if (model.models.length == 0) {
-                        alert('There is no Archivos to select.');
-                    } else {
-                        selection.showSelectionList({list: model, name: 'name', title: 'Archivo List'});
-                    }
-                    ;
-                });
-            });
-            Backbone.on('archivoComponent-post-selection', function(models) {
-            	self.archivoComponent.addRecords(models);
-            	self.archivoComponent.render();
-            });
-
 		},
         renderChilds: function(params) {
             var self = this;
@@ -126,13 +111,13 @@ define(['controller/selectionController', 'model/cacheModel', 'model/experiencia
                 success: function() {
                 	self.tabs.render(self.tabsElement);
 
-					self.comentarioComponent.clearCache();
-					self.comentarioComponent.setRecords(self.model.get('listcomentario'));
-					self.comentarioComponent.render(self.tabs.getTabHtmlId('comentario'));
-
 					self.archivoComponent.clearCache();
 					self.archivoComponent.setRecords(self.model.get('listarchivo'));
 					self.archivoComponent.render(self.tabs.getTabHtmlId('archivo'));
+
+					self.comentarioComponent.clearCache();
+					self.comentarioComponent.setRecords(self.model.get('listcomentario'));
+					self.comentarioComponent.render(self.tabs.getTabHtmlId('comentario'));
 
                     $('#'+self.tabsElement).show();
                 },

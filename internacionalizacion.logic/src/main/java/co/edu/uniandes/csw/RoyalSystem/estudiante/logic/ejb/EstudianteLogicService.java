@@ -38,10 +38,14 @@ import javax.inject.Inject;
 import javax.enterprise.inject.Default;
 
 import co.edu.uniandes.csw.RoyalSystem.estudiante.logic.api.IEstudianteLogicService;
+import co.edu.uniandes.csw.RoyalSystem.estudiante.logic.dto.EstudianteDTO;
 
 @Default
 @Stateless
 @LocalBean
 public class EstudianteLogicService extends _EstudianteLogicService implements IEstudianteLogicService {
-
+ 
+    public EstudianteDTO getEstudianteId(String name) {
+        return persistance.getEstudianteId(name);
+    }
 }
