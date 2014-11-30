@@ -140,7 +140,7 @@ define(['model/intercambioModel'], function(intercambioModel) {
         },
 		_loadRequiredComponentsData: function(callBack) {
             var self = this;
-            var listReady = _.after(4, function(){
+            var listReady = _.after(3, function(){
                 callBack();
             }); 
             var listDataReady = function(componentName, model, aliasModel){
@@ -153,7 +153,6 @@ define(['model/intercambioModel'], function(intercambioModel) {
             };
 				App.Utils.getComponentList('usuarioComponent',listDataReady,'estudianteComponent');
 				App.Utils.getComponentList('estadoIntercambioComponent',listDataReady,'estadoComponent');
-				App.Utils.getComponentList('experienciaComponent',listDataReady,'experienciaComponent');
 				App.Utils.getComponentList('convenioComponent',listDataReady,'convenioComponent');
         },
         save: function() {
@@ -190,8 +189,6 @@ define(['model/intercambioModel'], function(intercambioModel) {
 				    ,estudiante: self.estudianteComponent
  
 				    ,estado: self.estadoComponent
- 
-				    ,experiencia: self.experienciaComponent
  
 				    ,convenio: self.convenioComponent
  

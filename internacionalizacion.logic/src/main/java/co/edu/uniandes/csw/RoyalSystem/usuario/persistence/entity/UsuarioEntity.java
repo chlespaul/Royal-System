@@ -34,5 +34,24 @@ import javax.persistence.Entity;
 
 @Entity
 public class UsuarioEntity extends _UsuarioEntity {
- 	
+    
+    private String role;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    public String getRole()
+    {
+        return role;
+    }
+    public void setRole(String role)
+    {
+        this.role=role;
+    }
 }

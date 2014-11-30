@@ -38,10 +38,16 @@ import javax.inject.Inject;
 import javax.enterprise.inject.Default;
 
 import co.edu.uniandes.csw.RoyalSystem.usuario.logic.api.IUsuarioLogicService;
+import co.edu.uniandes.csw.RoyalSystem.usuario.logic.dto.UsuarioDTO;
 
 @Default
 @Stateless
 @LocalBean
 public class UsuarioLogicService extends _UsuarioLogicService implements IUsuarioLogicService {
+
+    public UsuarioDTO getUsuarioId(String name) {
+    
+        return persistance.getUsuarioId(name);
+    }
 
 }

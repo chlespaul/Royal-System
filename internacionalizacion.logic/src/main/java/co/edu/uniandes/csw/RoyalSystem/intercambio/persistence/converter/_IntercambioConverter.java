@@ -56,7 +56,6 @@ public abstract class _IntercambioConverter {
 				}	
 					dto.setEstudianteId(entity.getEstudianteId());
 					dto.setEstadoId(entity.getEstadoId());
-					dto.setExperienciaId(entity.getExperienciaId());
 					dto.setConvenioId(entity.getConvenioId());
 			return dto;
 		}else{
@@ -83,8 +82,6 @@ public abstract class _IntercambioConverter {
 					entity.setEstudianteId(dto.getEstudianteId());
 			
 					entity.setEstadoId(dto.getEstadoId());
-			
-					entity.setExperienciaId(dto.getExperienciaId());
 			
 					entity.setConvenioId(dto.getConvenioId());
 			

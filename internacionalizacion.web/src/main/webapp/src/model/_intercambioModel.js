@@ -35,7 +35,6 @@ define([], function() {
 		 'fechaCreacion' : '' ,  
 		 'estudianteId' : '' ,  
 		 'estadoId' : '' ,  
-		 'experienciaId' : '' ,  
 		 'convenioId' : ''        },
         initialize: function() {
           var self = this;
@@ -55,11 +54,6 @@ define([], function() {
              }
 			 if(name=='estadoId'){  
                  var value = App.Utils.getModelFromCache('estadoIntercambioComponent',this.get('estadoId'));
-                 if(value) 
-                 return value.get('name');
-             }
-			 if(name=='experienciaId'){  
-                 var value = App.Utils.getModelFromCache('experienciaComponent',this.get('experienciaId'));
                  if(value) 
                  return value.get('name');
              }

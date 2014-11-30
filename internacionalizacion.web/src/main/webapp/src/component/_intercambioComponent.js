@@ -34,11 +34,11 @@ define(['component/_CRUDComponent', 'model/intercambioModel', 'controller/interc
         listModelClass: App.Model.IntercambioList,
         controller : App.Controller.IntercambioController,
         configUI: function(){
-        	this.listComponent.addColumn('name','Nombre');
-        	this.listComponent.addColumn('fechaCreacion','Fecha de Creacion');
-        	this.listComponent.addColumn('estudianteId','Estudiante');
-        	this.listComponent.addColumn('estadoId','Estado');
-        	this.listComponent.addColumn('convenioId','Convenio');
+        	this.listComponent.addColumn('name','Name');
+        	this.listComponent.addColumn('fechaCreacion','Fecha Creacion');
+        	this.listComponent.addColumn('estudianteId','Estudiante Id');
+        	this.listComponent.addColumn('estadoId','Estado Id');
+        	this.listComponent.addColumn('convenioId','Convenio Id');
         }
     });
     return App.Component._IntercambioComponent;

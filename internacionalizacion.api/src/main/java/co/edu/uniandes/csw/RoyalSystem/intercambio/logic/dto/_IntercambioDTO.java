@@ -54,9 +54,6 @@ public abstract class _IntercambioDTO {
 	private Long estadoId;
 	
 
-	private Long experienciaId;
-	
-
 	private Long convenioId;
 
 
@@ -103,15 +100,6 @@ public abstract class _IntercambioDTO {
  
 	public void setEstadoId(Long estadoid) {
 		this.estadoId = estadoid;
-	}
-
-
-	public Long getExperienciaId() {
-		return experienciaId;
-	}
- 
-	public void setExperienciaId(Long experienciaid) {
-		this.experienciaId = experienciaid;
 	}
 
 

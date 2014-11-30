@@ -33,7 +33,12 @@ import javax.enterprise.inject.Alternative;
 import javax.inject.Singleton;
 
 import co.edu.uniandes.csw.RoyalSystem.usuario.logic.api.IUsuarioLogicService;
+import co.edu.uniandes.csw.RoyalSystem.usuario.logic.dto.UsuarioDTO;
 @Singleton
 public class UsuarioMockLogicService extends _UsuarioMockLogicService implements IUsuarioLogicService {
+
+    public UsuarioDTO getUsuarioId(String name) {
+    return null;
+    }
 	
 }

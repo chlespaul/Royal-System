@@ -49,7 +49,6 @@ public abstract class _IntercambioEntity {
 	private Date fechaCreacion;
 	private Long estudianteId;
 	private Long estadoId;
-	private Long experienciaId;
 	private Long convenioId;
 
 	public Long getId(){
@@ -86,13 +85,6 @@ public abstract class _IntercambioEntity {
 	
 	public void setEstadoId(Long estadoId){
 		this.estadoId = estadoId;
-	}
-	public Long getExperienciaId(){
-		return experienciaId;
-	}
-	
-	public void setExperienciaId(Long experienciaId){
-		this.experienciaId = experienciaId;
 	}
 	public Long getConvenioId(){
 		return convenioId;

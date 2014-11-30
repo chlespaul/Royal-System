@@ -8,14 +8,21 @@
 		<label for="name">Name</label>
     	<input type="text" class="form-control" id="name" name="name" placeholder="Enter value" value="<%= usuario.get('name') %>"/>	
 		</div>
+                
+            <div class="form-group" >
+		<label for="correo">Correo</label>
+    	<input type="text" class="form-control" id="correo" name="correo" placeholder="Enter value" value="<%= usuario.get('correo') %>"/>	
+		</div>
+       
+            <div class="form-group" >
+		<label for="password">Password</label>
+    	<input type="text" class="form-control" id="password" name="password" placeholder="Enter value" value="<%= usuario.get('password') %>"/>	
+		</div>
 		<div class="form-group" >
 		<label for="codigo">Codigo</label>
     	<input type="text" class="form-control" id="codigo" name="codigo" placeholder="Enter value" value="<%= usuario.get('codigo') %>"/>	
 		</div>
-		<div class="form-group" >
-		<label for="correo">Correo</label>
-    	<input type="text" class="form-control" id="correo" name="correo" placeholder="Enter value" value="<%= usuario.get('correo') %>"/>	
-		</div>
+		
 		<div class="form-group" >
  
 			<label for="tipoidId">Tipo Id</label> 
@@ -26,6 +33,12 @@
             <% }); %>                
             </select>  
 		</div>
+                
+            <div class="form-group" >
+		<label for="role">Role</label>
+    	<input type="text" class="form-control" id="role" name="role" disabled="disabled" placeholder="Enter value" value="<%= usuario.get('role') %>"/>	
+		</div>
+        
     </form>
     </div>
 </script> 
