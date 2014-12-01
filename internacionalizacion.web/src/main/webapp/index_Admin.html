@@ -33,7 +33,7 @@
 				<ul class="nav">
 					<li><a href="enDesarrollo.html">Experiencias</a></li>
 					<li><a id="logoutLabel" href="#logout">Logout</a></li>
-                                        <li><a href="#contactenos">contactanos</a></li>
+                                        <li><a href="#contactenos">Cont&aacute;ctanos</a></li>
 				</ul>
 			</div>
 			
@@ -43,6 +43,35 @@
 				<span class="icon-bar"></span>
 			</button>
 		</div>
+          <div id="login" style="display: none;">
+        <form name="login-form" class="login-form" action="j_security_check">
+ 
+        <div class="header">
+        <span>Introduce tus datos para ingresar a la aplicaci&oacute;n web.</span>
+        </div>
+ 
+        <div class="content">
+                <!--El formulario tiene 2 inputs con el usuario y la contraseña. Cada uno de estos debe
+                tener los nombres clava "j_username" y "j_password" respectivamente -->
+            <input name="j_username" type="text" class="input username" placeholder="Username" />
+        <div class="user-icon"></div>
+        <input name="j_password" type="password" class="input password" placeholder="Password" />
+        <div class="pass-icon"></div>
+        </div>
+ 
+        <div class="footer">
+                    <a href="#registro" id="labelRegistro" class="register"> Register </a>
+                    <!-- el boton de submit es el común-->
+        <input type="submit" name="submit" value="Login" class="button" />
+ 
+        </div>
+ 
+    </form>
+
+    </div>
+        <div id="registro" style="display: none;">
+            
+    </div>
           
 	</div>
 	</div>
@@ -108,7 +137,7 @@
  
 <!-- Contact Section -->
 <div id="contactenos">
-<div class="span6"><h1 id="labContactanosT" class="cntr">Contactanos</h1>
+<div class="span6"><h1 id="labContactanosT" class="cntr">Cont&aacute;ctanos</h1>
 <p id="labContactanos">Por este medio puedes contactar con nosotros para resolver cualquier duda acerca de los intercambios. </p></div>
 	<div class="container">	
 		<div class="row">	
@@ -127,7 +156,7 @@
 				   <div class="control-group">
 					
 					<div class="controls">
-                                            <a>Titulo:</a>
+                                            <a>T&iacute;tulo:</a>
 					  <input type="text" class="input-xlarge" id="input11">
 					 
 					</div>
@@ -135,7 +164,7 @@
 				   <div class="control-group">
 					
 					<div class="controls">
-                                            <a>Cuentanos un poco mas</a>
+                                            <a>Cuentanos un poco m&aacute;s</a>
 					  <textarea class="input-xlarge" id="textarea" rows="3" style="height:210px"></textarea>
 					</div>
 				  </div>
@@ -181,7 +210,7 @@ $(document).ready(function() {
         element.style.display='none';
         element = document.getElementById("registro");
         element.style.display='block';
-        alert("Proximamente ...");
+        alert("Próximamente ...");
     });
 });
 </script>
