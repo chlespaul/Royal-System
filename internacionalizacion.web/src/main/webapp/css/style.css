@@ -24,7 +24,8 @@ h1.brand {
     display:block;
     height:auto;
     width: auto;
-    max-width:50%
+    max-width:50%;
+    margin: 0 auto; 
 }
 //Div flotante
 .floatDivAux {
@@ -255,7 +256,8 @@ border-radius: 10px;
 
 
 #headerSection .btn.btn-navbar {
-width: 100%;
+width: auto;
+height: auto;
 text-align: center;
 border: 0;
 margin: 0;
