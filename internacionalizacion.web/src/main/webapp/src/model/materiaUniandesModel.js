@@ -33,7 +33,11 @@ define(['model/_materiaUniandesModel'], function() {
  		validate: function(attrs,options){
             var validationMessage = "";
             if(!attrs.name){
-                validationMessage = "The name can't be empty.";
+                validationMessage = "El nombre no puede ser vacío.";
+            }
+            if(attrs.correo.search("@")=== -1)
+            {
+                validationMessage += " El correo debe contener el caracter @."
             }
             if(validationMessage.length>0){
                return validationMessage;

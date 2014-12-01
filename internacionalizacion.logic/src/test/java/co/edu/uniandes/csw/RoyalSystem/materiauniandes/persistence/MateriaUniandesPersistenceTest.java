@@ -225,7 +225,7 @@ public class MateriaUniandesPersistenceTest {
         public void debeEncontrar_getFiltrarMateriaTest(){
             
             for(int i = 0; i<data.size(); i++){
-            Assert.assertEquals(data.get(i).getCodigo(),materiaUniandesPersistence.getFiltrarMateria(Integer.parseInt(data.get(i).getCodigo()), data.get(i).getName(), "estado").getRecords().iterator().next().getCodigo());
+        Assert.assertEquals(data.get(i).getCodigo(),materiaUniandesPersistence.getFiltrarMateria(Integer.parseInt(data.get(i).getCodigo()), data.get(i).getName(), "estado").getRecords().iterator().next().getCodigo());
             }
         }
 	
