@@ -49,7 +49,7 @@ import javax.persistence.Query;
 public class UsuarioPersistence extends _UsuarioPersistence  implements IUsuarioPersistence {
 
     public UsuarioDTO getUsuarioId(String name) {
-    Query q = entityManager.createQuery("select y from ClientEntity y where y.name = '"+ name+"'");
+    Query q = entityManager.createQuery("select y from UsuarioEntity y where y.name = '"+ name+"'");
     if(q.getResultList().isEmpty())
     {
         return null;

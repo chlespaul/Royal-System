@@ -70,7 +70,7 @@ public class UsuarioService extends _UsuarioService {
      */
     @GET
     @Path("servicejson/{name}")
-    public UsuarioDTO getClientebyName(@PathParam("name") String name) {
+    public UsuarioDTO getUsuariobyName(@PathParam("name") String name) {
         return usuarioLogicService.getUsuarioId(name);
     }
  
