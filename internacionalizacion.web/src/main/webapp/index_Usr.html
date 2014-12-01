@@ -18,7 +18,7 @@
 <body>
     
     <div id="ventana-flotante" class="floatDivAux" style="display: none;">
-         <a class='cerrar' href='javascript:void(0);' onclick='cerrarDiv'>x</a>
+        <a id="cerrarDivFlotante" class='cerrar' href='javascript:void(0);' ><img src="img/cerrar.png"></a>
         <div class ="floatDivIframe" id="floatdiv">
             <iframe id="container" src="" style="width: 100%; height: 100%; border: 0; margin: 0;"></iframe>
         </div>  
@@ -152,9 +152,9 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-    $('#loginLabel').click(function(evento) {
-        element = document.getElementById("login");
-        element.style.display='block';
+    $('#cerrarDivFlotante').click(function(evento) {
+        element = document.getElementById("ventana-flotante");
+        element.style.display='none';
     });
 });
 </script>
@@ -170,12 +170,25 @@ $(document).ready(function() {
 });
 </script>
 
+
 <script type="text/javascript">
     function redirectFrame(url) {
+        
+        element = document.getElementById("ventana-flotante");
+        element.style.display='block';
         $('#container').attr('src', url);
         $('#container').css('height', ($(window).height() - $('#header').height() - 30) + 'px');
     }
 </script>
+
+<script>
+    floatingMenu.add('ventana-flotante',
+    {
+        targetRight: 10,
+        targetTop: 10,
+        snap: true
+    });
+ </script>
 
 </body>
 </html>

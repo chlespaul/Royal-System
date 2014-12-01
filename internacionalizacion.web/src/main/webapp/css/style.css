@@ -254,7 +254,13 @@ text-decoration: none;
 border-radius: 10px;
 }
 
-
+#cerrarDivFlotante
+{
+    float: right;
+    font-size: larger;
+    font-weight: bold;
+    color: black; 
+}
 #headerSection .btn.btn-navbar {
 width: auto;
 height: auto;
