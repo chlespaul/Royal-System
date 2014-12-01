@@ -107,7 +107,7 @@ public class MateriaUniandesPersistenceTest {
 		for(int i=0;i<3;i++){
 			MateriaUniandesEntity entity=new MateriaUniandesEntity();
 			entity.setName(generateRandom(String.class));
-			entity.setCodigo(generateRandom(String.class));
+			entity.setCodigo(generateRandom(Integer.class).toString());
 			em.persist(entity);
 			data.add(entity);
 		}
@@ -214,5 +214,19 @@ public class MateriaUniandesPersistenceTest {
             Assert.assertTrue(found);
         }
 	}
+        
+        @Test
+        public void debeNoEncontrar_getFiltrarMateriaTest(){
+            
+            Assert.assertTrue(materiaUniandesPersistence.getFiltrarMateria(9999, "materia falsa", "estado").getRecords().isEmpty());
+            
+        }
+        @Test
+        public void debeEncontrar_getFiltrarMateriaTest(){
+            
+            for(int i = 0; i<data.size(); i++){
+            Assert.assertEquals(data.get(i).getCodigo(),materiaUniandesPersistence.getFiltrarMateria(Integer.parseInt(data.get(i).getCodigo()), data.get(i).getName(), "estado").getRecords().iterator().next().getCodigo());
+            }
+        }
 	
 }
