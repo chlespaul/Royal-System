@@ -18,6 +18,49 @@ h1.brand {
     text-shadow: 1px 1px 0 #000000;
     width: 222px;
 }
+.img-responsive
+{
+    float: right;
+    display:block;
+    height:auto;
+    width: auto;
+    max-width:50%
+}
+//Div flotante
+.floatDivAux {
+position:absolute;  
+width:auto;height:auto;
+bottom: -2px; 
+right: 50%; 
+z-index: 10000; 
+float: right; 
+margin-top: 0; 
+margin-right: -550px; 
+margin-bottom: 5px; 
+margin-left: 0px; 
+ }
+
+.floatDivIframe {
+ margin: 0;
+ padding: 10px 10px 20px 5px;
+ position: relative;
+
+}
+.floatDivIframe iframe {
+ float: left;
+ margin: 0 5px;
+ padding: 4px;
+ background: #3a494c;
+ color: #eee;
+ border: 2px solid #333;
+}
+.clear {
+ clear: left;
+ height: 1px;
+ margin-top: -1px;
+}
+
+
 
 #login
 {
