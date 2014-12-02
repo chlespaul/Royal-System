@@ -72,6 +72,14 @@ public abstract class _ExperienciaService {
 	public ExperienciaDTO getExperiencia(@PathParam("id") Long id){
 		return experienciaLogicService.getExperiencia(id);
 	}
+        
+        @GET
+	@Path("tener")
+	public ExperienciaDTO getExperiencia2(@QueryParam("id") Long id){
+		return experienciaLogicService.getExperiencia(id);
+	}
+	
+        
 	
 	@PUT
 	public void updateExperiencia(@PathParam("id") Long id, ExperienciaDTO experiencia){
